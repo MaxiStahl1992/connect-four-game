@@ -1,0 +1,28 @@
+<div class="board-component__container">
+
+  <div class="board__game-display">
+    <div [class]="!winner ? 'board__container' : 'board__container blur'">
+      <div class="board__field" *ngFor="let field of fields; let i = index">
+        <app-chip [value]=field (click)="makeMove(i)"></app-chip>
+      </div>
+    </div>
+
+    <div class="board__winner" *ngIf="winner">
+      <h3>And the winner is: </h3>
+      <h1 [class]="winner === 'yellow' ? 'yellow' : 'red'">{{winner | uppercase}}</h1>
+      <button (click)="newGame()">New Game</button>
+    </div>
+
+  </div>
+
+  <div class="board__information" *ngIf="!winner">
+    <button (click)="newGame()">Reset</button>
+    <p>
+      It's
+      <span [class]="getActivePlayer() === 'yellow' ? 'yellow' : 'red'">{{getActivePlayer() | uppercase}}'s</span>
+      turn
+    </p>
+  </div>
+
+
+</div>

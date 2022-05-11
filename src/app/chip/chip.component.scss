@@ -1,0 +1,20 @@
+.chip__container{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.chip__container:hover{
+  cursor: pointer;
+}
+
+.chip__yellow{
+  background-color: #e9c46a;
+}
+
+.chip__red{
+  background-color: #e76f51;
+}
+
+

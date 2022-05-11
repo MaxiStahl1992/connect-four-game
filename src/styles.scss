@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+  margin: 0;
+  height: 100%;
+}
+
+body{
+  background-color: #264653;
+  font-family: "Roboto Mono", sans-serif;
+}
+
+app-root{
+  height: 100%;
+}
